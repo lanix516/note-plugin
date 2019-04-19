@@ -1,0 +1,68 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="./base-min.css" />
+        
+        <style type="text/css">
+            select {
+                height:36px!important;
+                width:120px;
+            }
+            html {
+                font-size: 14px;
+            }
+        </style>
+        
+        
+
+    
+    
+    
+    
+    
+    
+    
+    <div id="layout" class="pure-g">
+        <div class="sidebar pure-u-1">
+                <form class="pure-form pure-form-stacked">
+                        <fieldset>
+                            <legend>A Daily Notebook</legend>
+                    
+                            <label for="email">日志</label>
+                            <input id="note" type="text" placeholder="note" style="width:300px">
+                            <span class="pure-form-message">This is a required field.</span>                    
+                            <label for="type">日志类型</label>
+                            <select id="type">
+                                <option>BUG</option>
+                                <option>开发</option>
+                                <option>其他</option>
+                            </select>
+                            <label for="time">开发时间</label>
+                            <select id="time">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                            </select>
+                            <label for="state">状态</label>
+                            <select id="state">
+                                <option>完成</option>
+                                <option>未完成</option>
+                                <option>=待定</option>
+                            </select>
+                            <button type="submit" class="pure-button pure-button-primary">生成</button>
+                            <textarea rows="10" style="width:600px">
+
+                            </textarea>
+                        </fieldset>
+                    </form>
+        </div>
+    
+      
+    </div>
+    
+ 
+ 
