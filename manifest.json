@@ -15,6 +15,18 @@
         "storage",
         "notifications",
         "http://*/*",
-        "https://*/*"
+        "https://*/*",
+        "activeTab",
+        "tabs"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*"
+            ],
+            "js": [
+                "content-script.js"
+            ]
+        }
     ]
 }

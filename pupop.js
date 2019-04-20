@@ -59,8 +59,6 @@ var vm = new Vue({
 
             _today_str.length > 6 ? this.final_text += _today_str : ''
             _tomorrow_str.length > 6 ? this.final_text += _tomorrow_str : ''
-
-
         },
         get_yesterday() {
             this.yesterday_text = '';
@@ -78,7 +76,15 @@ var vm = new Vue({
 
             _today_str.length > 6 ? this.yesterday_text += _today_str : ''
             _tomorrow_str.length > 6 ? this.yesterday_text += _tomorrow_str : ''
-        }
+        },
+        write_to_page() {
+            let _this = this
+            chrome.tabs.getSelected(function callback(tab) {
+                chrome.tabs.sendMessage(tab.id, { greeting: _this.final_text }, function (response) {
+                    console.log(response);
+                });
+            })
 
+        }
     },
 })

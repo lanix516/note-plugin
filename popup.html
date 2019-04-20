@@ -31,7 +31,7 @@
                         style="width:600px;overflow:scroll;" disabled></textarea>
                 </div>
 
-                <input id="note" v-model="note" type="text" placeholder="请在此处输入日志内容" style="width:100%">
+                <input id="note" v-model="note" maxlength="64" type="text" placeholder="请在此处输入日志内容" style="width:100%">
                 <span class="pure-form-message" style="color:#FF0000" v-if="note.length==0">This is a required
                     field.</span>
                 <div class="pure-g">
@@ -78,8 +78,13 @@
                     </div>
                     <div class="pure-u-1-2">
                         <button @click="save" class="pure-button pure-button-primary"
-                            style="width:100px;margin: 16px 0">生成</button>
+                            style="width:100px;margin: 16px 0">保存</button>
                     </div>
+                    <div class="pure-u-1-2">
+                        <button @click="write_to_page" class="pure-button pure-button-primary"
+                            style="width:100px;margin: 16px 0">写入CRM</button>
+                    </div>
+
                     <textarea v-model="final_text" rows="8" style="width:600px"></textarea>
                 </div>
             </fieldset>
