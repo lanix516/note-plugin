@@ -18,6 +18,13 @@
     html {
         font-size: 14px;
     }
+    .button-error {
+        color: white;
+            border-radius: 4px;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+            background: rgb(202, 60, 60); /* this is a maroon */
+        }
+
 </style>
 <div id="layout" class="pure-g" style="width:600px;padding: 10px">
     <div class="sidebar pure-u-1">
@@ -25,6 +32,8 @@
             <fieldset>
                 <legend style="font-size:28px; font-weight:700;">MD Note</legend>
                 <div style="margin: 5px 0;overflow: hidden;">
+                    <button @click="clear_all_note" class="pure-button button-error"
+                        style="width:100px;float:right;margin-left:5px">清除日志</button>
                     <button @click="show_yesterday=!show_yesterday" class="pure-button pure-button-primary"
                         style="width:100px;float:right">昨日日志</button>
                     <textarea v-model="yesterday_text" v-if="show_yesterday" rows="5"
